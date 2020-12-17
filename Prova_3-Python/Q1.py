@@ -20,12 +20,12 @@ def verificar(x, y, z, p):
 
 while continuaçao == True:
     print('CÓDIGO\tPRODUTOS')
-    print('-=' * 30)
+    print('-=' * 25)
 
     for i in [1,2,3,4,5,6,7]:
         exibir(i, produtos)
 
-    print('-=' * 30)
+    print('-=' * 25)
 
     pergunta = int(input('Digite o código que deseja verificar a quantidade e o preço: (para encerrar digite 0) '))
 

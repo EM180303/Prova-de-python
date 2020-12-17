@@ -7,6 +7,7 @@ por fim exiba todos os pacientes cadastrados, o seu estado e qual pulseira ele r
 '''
 
 import os
+import time
 
 nome_estado = {}
 pulseira = []
@@ -14,10 +15,14 @@ pulseira = []
 def funcEstado(x):
     if x == 'LEVE':
         pulseira.append('VERDE')
+        temp = 'VERDE'
     elif x == 'GRAVE':
         pulseira.append('AMARELA')
+        temp = 'AMARELA'
     elif x == 'CRITICO':
         pulseira.append('VERMELHA')
+        temp = 'VEREMLHA'
+    print(temp)
 
 for i in range(5):
     nome = str(input('Qual o nome do paciente? '))
@@ -26,6 +31,7 @@ for i in range(5):
     estado = estado.upper()
     nome_estado[nome] = (estado)
     funcEstado(estado)
+    time.sleep(2)
     os.system("cls")
 
 def exibir(x, s, p):
